@@ -1,0 +1,9 @@
+#+title: README
+
+* rules_hashicorp
+I find it quite annoying to update a boatload of =http_archive='s when pulling in dependencies from =releases.hashicorp.com=.
+
+This ruleset fetches the dependencies and hashes from the releases directory and loads them.
+** version
+** installation
+** usage

@@ -1,0 +1,30 @@
+name: rules_hashicorp releases
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  formatting:
+    name: format bazel files
+    steps:
+      - uses: actions/checkout@4
+
+      - uses: jbajic/setup-buildifier@v1
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: format
+
+#  release:
+#    name: release version of rules_hashicorp
+#    steps:
+#      - uses: actions/checkout@v4
+
+#      - name: bump version
+#        uses: reecetech/version-increment@2024.4.3
+#        id: version
+#        with:
+#          scheme: semver
+#          increment: patch
