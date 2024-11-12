@@ -7,6 +7,7 @@ on:
 
 jobs:
   formatting:
+    runs-on: [ubuntu-latest]
     name: format bazel files
     steps:
       - uses: actions/checkout@4
